@@ -113,5 +113,5 @@ The examples are intentionally kept readable so that someone new to SystemVerilo
 
 ---
 
-## Contributions
-Author Sarath 
+
+`Author` Sarath 
