@@ -10,7 +10,7 @@ module counter #(
 
     always_ff @(posedge clk) begin
         if (!rst_n)
-            count <= '0;
+            count <= 4'b0000;
         else if (en)
             count <= count + 1'b1;
     end
