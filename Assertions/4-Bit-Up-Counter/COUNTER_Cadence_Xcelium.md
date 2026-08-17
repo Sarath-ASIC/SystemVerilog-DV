@@ -39,7 +39,41 @@ The objectives of this experiment are:
 | Waveform Viewer | Cadence SimVision ||
 | Timescale | 1ns/1ps |
 
-Xcelium version was checked using:
+ ## 4 Actual Xcelium Design Hierarchy Summary
 
-```bash
-xrun -version
+The final Xcelium output reported:
+
+```text
+Design hierarchy summary:
+                         Instances  Unique
+
+Modules:                       2       2
+Registers:                    16      16
+Scalar wires:                 3       -
+Vectored wires:               2       -
+Always blocks:                7       7
+Initial blocks:               5       5
+Pseudo assignments:           4       -
+Assertions:                   3       3
+Process Clocks:               1       1
+Simulation timescale:        1ps
+```
+
+This is an important verification result.
+
+### What does `Assertions: 3 3` mean?
+
+It means:
+
+```text
+Assertions instantiated/elaborated = 3
+Unique assertions                  = 3
+```
+
+Therefore Xcelium successfully recognized all three SVA properties:
+
+```text
+assert_reset
+assert_hold
+assert_increment
+```
