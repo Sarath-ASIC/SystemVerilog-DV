@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: tb_top</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_tb_top'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_tb_top')">tb_top</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 86.93</td>
+<td class="s10 cl rt"><a href="mod0.html#Line" >100.00</a></td>
+<td class="s5 cl rt"><a href="mod0.html#Cond" > 50.00</a></td>
+<td class="s9 cl rt"><a href="mod0.html#Toggle" > 97.73</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod0.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/synp5/Digital/digitallvs26/sv_proj/counter_tb.sv')">/home/synp5/Digital/digitallvs26/sv_proj/counter_tb.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod0.html#inst_tag_0"  onclick="showContent('inst_tag_0')">tb_top</a></td>
+<td class="s8 cl rt"> 86.93</td>
+<td class="s10 cl rt"><a href="mod0.html#Line" >100.00</a></td>
+<td class="s5 cl rt"><a href="mod0.html#Cond" > 50.00</a></td>
+<td class="s9 cl rt"><a href="mod0.html#Toggle" > 97.73</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod0.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_tb_top'>
+<hr>
+<a name="inst_tag_0"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_0" >tb_top</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 86.93</td>
+<td class="s10 cl rt"><a href="mod0.html#Line" >100.00</a></td>
+<td class="s5 cl rt"><a href="mod0.html#Cond" > 50.00</a></td>
+<td class="s9 cl rt"><a href="mod0.html#Toggle" > 97.73</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod0.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s8 cl rt"> 84.55</td>
+<td class="s10 cl rt">100.00</td>
+<td class="s5 cl rt"> 50.00</td>
+<td class="s9 cl rt"> 97.73</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="s7 cl rt"> 75.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<span class=inst>none</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod3.html#inst_tag_3" id="tag_urg_inst_3">dut</a></td>
+<td class="s9 cl rt"> 99.24</td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 97.73</td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt">100.00</td>
+<td class="wht cl rt"></td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod1.html#inst_tag_1" id="tag_urg_inst_1">u_assertions</a></td>
+<td class="s8 cl rt"> 86.36</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 97.73</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"> 75.00</td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod2.html#inst_tag_2" id="tag_urg_inst_2">u_coverage</a></td>
+<td class="s9 cl rt"> 97.73</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s9 cl rt"> 97.73</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_tb_top'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod0.html" >tb_top</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s10"><td class="lf">TOTAL</td><td></td><td>62</td><td>62</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">INITIAL</td><td>55</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">INITIAL</td><td>62</td><td>51</td><td>51</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>119</td><td>7</td><td>7</td><td>100.00</td></tr>
+</table>
+<pre class="code"><br clear=all>
+54                          initial begin
+55         1/1                  clk = 0;
+56         3/3                  forever #(CLK_PERIOD/2) clk = ~clk;
+57                          end
+58                      
+59                          // Test Sequence
+60                          initial begin
+61                      
+62         1/1          $dumpfile(&quot;counter.vcd&quot;);
+63         1/1          $dumpvars(0,tb_top); 
+64                              // Signal Initialization
+65         1/1                  rst_n    = 1'b0;
+66         1/1                  en       = 1'b0;
+67         1/1                  load     = 1'b0;
+68         1/1                  up_down  = 1'b1;
+69         1/1                  load_val = '0;
+70                      
+71                              // 1. Reset Verification
+72         3/3                  repeat (3) @(posedge clk);
+                        REPEAT_FALSE
+73         1/1                  rst_n = 1'b1;
+74         2/2                  @(posedge clk);
+75                      
+76                              // 2. Direct Load &amp; Boundary Tests
+77         1/1                  drive_load(8'hFE);
+78                              
+79                              // Count Up Rollover Test (0xFE -&gt; 0xFF -&gt; 0x00)
+80         1/1                  en = 1'b1;
+81         1/1                  up_down = 1'b1;
+82         3/3                  repeat (3) @(posedge clk);
+                        REPEAT_FALSE
+83                      
+84                              // Load 0x01 and Count Down Rollover (0x01 -&gt; 0x00 -&gt; 0xFF)
+85         1/1                  drive_load(8'h01);
+86         1/1                  up_down = 1'b0;
+87         3/3                  repeat (3) @(posedge clk);
+                        REPEAT_FALSE
+88                      
+89                              // 3. Enable / Disable Toggle
+90         1/1                  en = 1'b0;
+91         3/3                  repeat (3) @(posedge clk);
+                        REPEAT_FALSE
+92         1/1                  en = 1'b1;
+93         3/3                  repeat (5) @(posedge clk);
+                        REPEAT_FALSE
+94                      
+95                              // 4. Randomized Stimulus Run
+96         1/1                  repeat (500) begin
+97         2/2                      @(posedge clk);
+98         1/1                      load     &lt;= (std::randomize() with { load dist {1 := 10, 0 := 90}; }) ? 1'b1 : 1'b0;
+99         1/1                      en       &lt;= (std::randomize() with { en dist {1 := 85, 0 := 15}; }) ? 1'b1 : 1'b0;
+100        1/1                      up_down  &lt;= (std::randomize() with { up_down dist {1 := 50, 0 := 50}; }) ? 1'b1 : 1'b0;
+101        1/1                      load_val &lt;= $urandom_range(0, 255);
+102                             end
+                        REPEAT_FALSE
+103                     
+104                             // 5. Wrap-up
+105        2/2                  @(posedge clk);
+106        1/1                  en   = 1'b0;
+107        1/1                  load = 1'b0;
+108        3/3                  repeat (5) @(posedge clk);
+                        REPEAT_FALSE
+109                     
+110        1/1                  $display(&quot;--------------------------------------------------&quot;);
+111        1/1                  $display(&quot; Simulation Complete. All functional checks passed.&quot;);
+112        1/1                  $display(&quot; Final Coverage Instance Met: %0.2f%%&quot;, $get_coverage());
+113        1/1                  $display(&quot;--------------------------------------------------&quot;);
+114        1/1                  $finish;
+115                         end
+116                     
+117                         // Task for synchronous parallel loading
+118                         task automatic drive_load(input logic [WIDTH-1:0] val);
+119        2/2                  @(posedge clk);
+120        1/1                  load     &lt;= 1'b1;
+121        1/1                  load_val &lt;= val;
+122        2/2                  @(posedge clk);
+123        1/1                  load     &lt;= 1'b0;
+</pre>
+<hr>
+<a name="Cond"></a>
+Cond Coverage for Module : <a href="mod0.html" >tb_top</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="3" width="82">
+<tr><th></th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s5"><td class="lf">Conditions</td><td>6</td><td>3</td><td>50.00</td></tr>
+<tr class="s5"><td class="lf">Logical</td><td>6</td><td>3</td><td>50.00</td></tr>
+<tr class="wht"><td class="lf">Non-Logical</td><td>0</td><td>0</td><td></td></tr>
+<tr class="wht"><td class="lf">Event</td><td>0</td><td>0</td><td></td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       98
+ EXPRESSION (std::randomize() with {
+load dist {1 := 10, 0 := 90};
+}
+ ? 1'b1 : 1'b0)
+             ----------------------------1---------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       99
+ EXPRESSION (std::randomize() with {
+en dist {1 := 85, 0 := 15};
+}
+ ? 1'b1 : 1'b0)
+             ---------------------------1--------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<br clear=all>
+<pre class="code"> LINE       100
+ EXPRESSION (std::randomize() with {
+up_down dist {1 := 50, 0 := 50};
+}
+ ? 1'b1 : 1'b0)
+             -----------------------------1-----------------------------
+</pre>
+<table class="noborder">
+<col width="40">
+<tr><th>-1-</th><th>Status</th></tr>
+<tr class="uRed"><td>0</td><td class="lf">Not Covered</td></tr>
+<tr class="uGreen"><td>1</td><td class="lf">Covered</td></tr>
+</table>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod0.html" >tb_top</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s8">
+<td>Totals</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s9">
+<td>Total Bits</td>
+<td class="rt">44</td>
+<td class="rt">43</td>
+<td class="rt">97.73 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">22</td>
+<td class="rt">22</td>
+<td class="rt">100.00</td>
+</tr><tr class="s9">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">22</td>
+<td class="rt">21</td>
+<td class="rt">95.45 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s8">
+<td>Signals</td>
+<td class="rt">8</td>
+<td class="rt">7</td>
+<td class="rt">87.50 </td>
+</tr><tr class="s9">
+<td>Signal Bits</td>
+<td class="rt">44</td>
+<td class="rt">43</td>
+<td class="rt">97.73 </td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">22</td>
+<td class="rt">22</td>
+<td class="rt">100.00</td>
+</tr><tr class="s9">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">22</td>
+<td class="rt">21</td>
+<td class="rt">95.45 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rst_n</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>en</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>load</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>up_down</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>load_val[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>count[7:0]</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rollover</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod0.html" >tb_top</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">6</td>
+<td class="rt">6</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">98</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">99</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>TERNARY</td>
+<td class="rt">100</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+98                     load     <= (std::randomize() with { load dist {1 := 10, 0 := 90}; }) ? 1'b1 : 1'b0;
+                                                                                             <font color = "green">-1-</font>  
+                                                                                             <font color = "green">==></font>  
+                                                                                             <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+99                     en       <= (std::randomize() with { en dist {1 := 85, 0 := 15}; }) ? 1'b1 : 1'b0;
+                                                                                           <font color = "green">-1-</font>  
+                                                                                           <font color = "green">==></font>  
+                                                                                           <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+100                    up_down  <= (std::randomize() with { up_down dist {1 := 50, 0 := 50}; }) ? 1'b1 : 1'b0;
+                                                                                                <font color = "green">-1-</font>  
+                                                                                                <font color = "green">==></font>  
+                                                                                                <font color = "green">==></font>  
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_0">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_tb_top">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Cond">Cond</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>

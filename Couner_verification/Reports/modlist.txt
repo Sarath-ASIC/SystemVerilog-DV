@@ -1,0 +1,15 @@
+Design Module List
+
+Total Module Definition Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 84.55 100.00  50.00  97.73 --     100.00  75.00 
+
+
+Total modules in report: 4
+-------------------------------------------------------------------------------
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME               
+ 86.36 --     --      97.73 --     --      75.00 counter_assertions 
+ 86.93 100.00  50.00  97.73 --     100.00 --     tb_top             
+ 97.73 --     --      97.73 --     --     --     counter_coverage   
+ 99.24 100.00 --      97.73 --     100.00 --     counter_8bit       
+

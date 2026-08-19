@@ -1,0 +1,510 @@
+Group : tb_top.u_coverage::cg_counter
+
+===============================================================================
+Group : tb_top.u_coverage::cg_counter
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+ 91.96  91.96    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/synp5/Digital/digitallvs26/sv_proj/coverage.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME               
+ 91.96 1      100    1        64           64            cg_counter_metrics 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   tb_top.u_coverage::cg_counter
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 23       1         22      97.62   
+Crosses   16       4         12      75.00   
+
+
+Variables for Group  tb_top.u_coverage::cg_counter
+
+
+VARIABLE    EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_enable   2        0         2       100.00  100  1      1        0                    
+cp_up_down  2        0         2       100.00  100  1      1        0                    
+cp_load     2        0         2       100.00  100  1      1        0                    
+cp_load_val 7        1         6       85.71   100  1      1        0                    
+cp_count    8        0         8       100.00  100  1      1        0                    
+cp_rollover 2        0         2       100.00  100  1      1        0                    
+
+
+Crosses for Group  tb_top.u_coverage::cg_counter
+
+
+CROSS          EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST PRINT MISSING COMMENT 
+cross_op_modes 8        2         6       75.00   100  1      1        0                     
+cross_wrap_up  8        2         6       75.00   100  1      1        0                     
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_enable
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for cp_enable
+
+
+Bins
+
+NAME     COUNT AT LEAST 
+inactive 11    1        
+active   514   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_up_down
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for cp_up_down
+
+
+Bins
+
+NAME COUNT AT LEAST 
+down 13    1        
+up   512   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_load
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for cp_load
+
+
+Bins
+
+NAME        COUNT AT LEAST 
+no_load     24    1        
+load_active 501   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_load_val
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 7        1         6       85.71   
+
+
+User Defined Bins for cp_load_val
+
+
+Uncovered bins
+
+NAME    COUNT AT LEAST NUMBER 
+max_val 0     1        1      
+
+
+Covered bins
+
+NAME             COUNT AT LEAST 
+mid_range[03:41] 136   1        
+mid_range[42:80] 133   1        
+mid_range[81:bf] 131   1        
+mid_range[c0:fe] 106   1        
+walking_ones     33    1        
+min_val          3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_count
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 8        0         8       100.00  
+
+
+User Defined Bins for cp_count
+
+
+Bins
+
+NAME            COUNT AT LEAST 
+quarters[00:3f] 142   1        
+quarters[40:7f] 135   1        
+quarters[80:bf] 134   1        
+quarters[c0:ff] 114   1        
+max             5     1        
+zero            6     1        
+wrap_down       1     1        
+wrap_up         1     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_rollover
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for cp_rollover
+
+
+Bins
+
+NAME      COUNT AT LEAST 
+idle      523   1        
+triggered 2     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Cross cross_op_modes
+
+
+Samples crossed: cp_enable cp_up_down cp_load
+CATEGORY                           EXPECTED UNCOVERED COVERED PERCENT MISSING 
+Automatically Generated Cross Bins 8        2         6       75.00   2       
+
+
+Automatically Generated Cross Bins for cross_op_modes
+
+
+Element holes
+
+cp_enable  cp_up_down cp_load       COUNT AT LEAST NUMBER 
+[inactive] *          [load_active] --    --       2      
+
+
+Covered bins
+
+cp_enable cp_up_down cp_load     COUNT AT LEAST 
+inactive  down       no_load     3     1        
+inactive  up         no_load     8     1        
+active    down       no_load     9     1        
+active    down       load_active 1     1        
+active    up         no_load     4     1        
+active    up         load_active 500   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Cross cross_wrap_up
+
+
+Samples crossed: cp_rollover cp_up_down cp_enable
+CATEGORY                           EXPECTED UNCOVERED COVERED PERCENT MISSING 
+TOTAL                              8        2         6       75.00   1       
+Automatically Generated Cross Bins 6        1         5       83.33   1       
+User Defined Cross Bins            2        1         1       50.00           
+
+
+Automatically Generated Cross Bins for cross_wrap_up
+
+
+Uncovered bins
+
+cp_rollover cp_up_down cp_enable  COUNT AT LEAST NUMBER 
+[triggered] [up]       [inactive] 0     1        1      
+
+
+Covered bins
+
+cp_rollover cp_up_down cp_enable COUNT AT LEAST 
+idle        down       active    10    1        
+idle        down       inactive  2     1        
+idle        up         active    503   1        
+idle        up         inactive  8     1        
+triggered   down       inactive  1     1        
+
+
+User Defined Cross Bins for cross_wrap_up
+
+
+Uncovered bins
+
+NAME          COUNT AT LEAST NUMBER 
+down_rollover 0     1        1      
+
+
+Covered bins
+
+NAME        COUNT AT LEAST 
+up_rollover 1     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : cg_counter_metrics
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+ 91.96 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                          
+ 91.96  91.96    1      100    1        1            64           64                    tb_top.u_coverage::cg_counter 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   cg_counter_metrics
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 23       1         22      97.62   
+Crosses   16       4         12      75.00   
+
+
+Variables for Group Instance  cg_counter_metrics
+
+
+VARIABLE    EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_enable   2        0         2       100.00  100  1      1        0                    
+cp_up_down  2        0         2       100.00  100  1      1        0                    
+cp_load     2        0         2       100.00  100  1      1        0                    
+cp_load_val 7        1         6       85.71   100  1      1        0                    
+cp_count    8        0         8       100.00  100  1      1        0                    
+cp_rollover 2        0         2       100.00  100  1      1        0                    
+
+
+Crosses for Group Instance  cg_counter_metrics
+
+
+CROSS          EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST PRINT MISSING COMMENT 
+cross_op_modes 8        2         6       75.00   100  1      1        0                     
+cross_wrap_up  8        2         6       75.00   100  1      1        0                     
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_enable
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for cp_enable
+
+
+Bins
+
+NAME     COUNT AT LEAST 
+inactive 11    1        
+active   514   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_up_down
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for cp_up_down
+
+
+Bins
+
+NAME COUNT AT LEAST 
+down 13    1        
+up   512   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_load
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for cp_load
+
+
+Bins
+
+NAME        COUNT AT LEAST 
+no_load     24    1        
+load_active 501   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_load_val
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 7        1         6       85.71   
+
+
+User Defined Bins for cp_load_val
+
+
+Uncovered bins
+
+NAME    COUNT AT LEAST NUMBER 
+max_val 0     1        1      
+
+
+Covered bins
+
+NAME             COUNT AT LEAST 
+mid_range[03:41] 136   1        
+mid_range[42:80] 133   1        
+mid_range[81:bf] 131   1        
+mid_range[c0:fe] 106   1        
+walking_ones     33    1        
+min_val          3     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_count
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 8        0         8       100.00  
+
+
+User Defined Bins for cp_count
+
+
+Bins
+
+NAME            COUNT AT LEAST 
+quarters[00:3f] 142   1        
+quarters[40:7f] 135   1        
+quarters[80:bf] 134   1        
+quarters[c0:ff] 114   1        
+max             5     1        
+zero            6     1        
+wrap_down       1     1        
+wrap_up         1     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_rollover
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        0         2       100.00  
+
+
+User Defined Bins for cp_rollover
+
+
+Bins
+
+NAME      COUNT AT LEAST 
+idle      523   1        
+triggered 2     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Cross cross_op_modes
+
+
+Samples crossed: cp_enable cp_up_down cp_load
+CATEGORY                           EXPECTED UNCOVERED COVERED PERCENT MISSING 
+Automatically Generated Cross Bins 8        2         6       75.00   2       
+
+
+Automatically Generated Cross Bins for cross_op_modes
+
+
+Element holes
+
+cp_enable  cp_up_down cp_load       COUNT AT LEAST NUMBER 
+[inactive] *          [load_active] --    --       2      
+
+
+Covered bins
+
+cp_enable cp_up_down cp_load     COUNT AT LEAST 
+inactive  down       no_load     3     1        
+inactive  up         no_load     8     1        
+active    down       no_load     9     1        
+active    down       load_active 1     1        
+active    up         no_load     4     1        
+active    up         load_active 500   1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Cross cross_wrap_up
+
+
+Samples crossed: cp_rollover cp_up_down cp_enable
+CATEGORY                           EXPECTED UNCOVERED COVERED PERCENT MISSING 
+TOTAL                              8        2         6       75.00   1       
+Automatically Generated Cross Bins 6        1         5       83.33   1       
+User Defined Cross Bins            2        1         1       50.00           
+
+
+Automatically Generated Cross Bins for cross_wrap_up
+
+
+Uncovered bins
+
+cp_rollover cp_up_down cp_enable  COUNT AT LEAST NUMBER 
+[triggered] [up]       [inactive] 0     1        1      
+
+
+Covered bins
+
+cp_rollover cp_up_down cp_enable COUNT AT LEAST 
+idle        down       active    10    1        
+idle        down       inactive  2     1        
+idle        up         active    503   1        
+idle        up         inactive  8     1        
+triggered   down       inactive  1     1        
+
+
+User Defined Cross Bins for cross_wrap_up
+
+
+Uncovered bins
+
+NAME          COUNT AT LEAST NUMBER 
+down_rollover 0     1        1      
+
+
+Covered bins
+
+NAME        COUNT AT LEAST 
+up_rollover 1     1        
+
+

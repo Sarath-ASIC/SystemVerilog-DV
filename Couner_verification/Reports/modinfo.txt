@@ -1,0 +1,593 @@
+===============================================================================
+Module : counter_assertions
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 86.36 --     --      97.73 --     --      75.00 
+
+Source File(s) : 
+
+/home/synp5/Digital/digitallvs26/sv_proj/assertion.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME                
+ 86.36 --     --      97.73 --     --      75.00 tb_top.u_assertions 
+
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : counter_assertions
+                Total Covered Percent 
+Totals          8     7       87.50   
+Total Bits      44    43      97.73   
+Total Bits 0->1 22    22      100.00  
+Total Bits 1->0 22    21      95.45   
+
+                            
+Ports          8  7  87.50  
+Port Bits      44 43 97.73  
+Port Bits 0->1 22 22 100.00 
+Port Bits 1->0 22 21 95.45  
+
+Port Details
+              Toggle Toggle 1->0 Toggle 0->1 Direction 
+clk           Yes    Yes         Yes         INPUT     
+rst_n         No     No          Yes         INPUT     
+en            Yes    Yes         Yes         INPUT     
+load          Yes    Yes         Yes         INPUT     
+up_down       Yes    Yes         Yes         INPUT     
+load_val[7:0] Yes    Yes         Yes         INPUT     
+count[7:0]    Yes    Yes         Yes         INPUT     
+rollover      Yes    Yes         Yes         INPUT     
+
+
+-------------------------------------------------------------------------------
+Assert Coverage for Module : counter_assertions
+                 Total Attempted Percent Succeeded/Matched Percent 
+Assertions       8     8         100.00  6                 75.00   
+Cover properties 0     0                 0                         
+Cover sequences  0     0                 0                         
+Total            8     8         100.00  6                 75.00   
+
+
+
+-------------------------------------------------------------------------------
+
+Assertion Details
+
+Name                 Attempts Real Successes Failures Incomplete 
+a_count_down         527      8              0        0          
+a_count_up           527      3              0        0          
+a_hold_disabled      527      8              1        1          
+a_load_priority      527      501            1        0          
+a_rollover_down      527      0              1        0          
+a_rollover_one_cycle 527      2              0        0          
+a_rollover_up        527      0              1        0          
+a_sync_reset         527      1              0        0          
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : tb_top.u_assertions
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 86.36 --     --      97.73 --     --      75.00 
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 86.36 --     --      97.73 --     --      75.00 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME               
+ 86.36 --     --      97.73 --     --      75.00 counter_assertions 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME   
+ 86.93 100.00  50.00  97.73 --     100.00 --     tb_top 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : tb_top
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 86.93 100.00  50.00  97.73 --     100.00 --     
+
+Source File(s) : 
+
+/home/synp5/Digital/digitallvs26/sv_proj/counter_tb.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME   
+ 86.93 100.00  50.00  97.73 --     100.00 --     tb_top 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : tb_top
+
+             Line No.   Total   Covered  Percent
+TOTAL                       62       62   100.00
+INITIAL            55        4        4   100.00
+INITIAL            62       51       51   100.00
+ROUTINE           119        7        7   100.00
+
+54                          initial begin
+55         1/1                  clk = 0;
+56         3/3                  forever #(CLK_PERIOD/2) clk = ~clk;
+57                          end
+58                      
+59                          // Test Sequence
+60                          initial begin
+61                      
+62         1/1          $dumpfile("counter.vcd");
+63         1/1          $dumpvars(0,tb_top); 
+64                              // Signal Initialization
+65         1/1                  rst_n    = 1'b0;
+66         1/1                  en       = 1'b0;
+67         1/1                  load     = 1'b0;
+68         1/1                  up_down  = 1'b1;
+69         1/1                  load_val = '0;
+70                      
+71                              // 1. Reset Verification
+72         3/3                  repeat (3) @(posedge clk);
+                        REPEAT_FALSE
+73         1/1                  rst_n = 1'b1;
+74         2/2                  @(posedge clk);
+75                      
+76                              // 2. Direct Load & Boundary Tests
+77         1/1                  drive_load(8'hFE);
+78                              
+79                              // Count Up Rollover Test (0xFE -> 0xFF -> 0x00)
+80         1/1                  en = 1'b1;
+81         1/1                  up_down = 1'b1;
+82         3/3                  repeat (3) @(posedge clk);
+                        REPEAT_FALSE
+83                      
+84                              // Load 0x01 and Count Down Rollover (0x01 -> 0x00 -> 0xFF)
+85         1/1                  drive_load(8'h01);
+86         1/1                  up_down = 1'b0;
+87         3/3                  repeat (3) @(posedge clk);
+                        REPEAT_FALSE
+88                      
+89                              // 3. Enable / Disable Toggle
+90         1/1                  en = 1'b0;
+91         3/3                  repeat (3) @(posedge clk);
+                        REPEAT_FALSE
+92         1/1                  en = 1'b1;
+93         3/3                  repeat (5) @(posedge clk);
+                        REPEAT_FALSE
+94                      
+95                              // 4. Randomized Stimulus Run
+96         1/1                  repeat (500) begin
+97         2/2                      @(posedge clk);
+98         1/1                      load     <= (std::randomize() with { load dist {1 := 10, 0 := 90}; }) ? 1'b1 : 1'b0;
+99         1/1                      en       <= (std::randomize() with { en dist {1 := 85, 0 := 15}; }) ? 1'b1 : 1'b0;
+100        1/1                      up_down  <= (std::randomize() with { up_down dist {1 := 50, 0 := 50}; }) ? 1'b1 : 1'b0;
+101        1/1                      load_val <= $urandom_range(0, 255);
+102                             end
+                        REPEAT_FALSE
+103                     
+104                             // 5. Wrap-up
+105        2/2                  @(posedge clk);
+106        1/1                  en   = 1'b0;
+107        1/1                  load = 1'b0;
+108        3/3                  repeat (5) @(posedge clk);
+                        REPEAT_FALSE
+109                     
+110        1/1                  $display("--------------------------------------------------");
+111        1/1                  $display(" Simulation Complete. All functional checks passed.");
+112        1/1                  $display(" Final Coverage Instance Met: %0.2f%%", $get_coverage());
+113        1/1                  $display("--------------------------------------------------");
+114        1/1                  $finish;
+115                         end
+116                     
+117                         // Task for synchronous parallel loading
+118                         task automatic drive_load(input logic [WIDTH-1:0] val);
+119        2/2                  @(posedge clk);
+120        1/1                  load     <= 1'b1;
+121        1/1                  load_val <= val;
+122        2/2                  @(posedge clk);
+123        1/1                  load     <= 1'b0;
+
+-------------------------------------------------------------------------------
+Cond Coverage for Module : tb_top
+
+               Total   Covered  Percent
+Conditions          6        3    50.00
+Logical             6        3    50.00
+Non-Logical         0        0
+Event               0        0
+
+ LINE       98
+ EXPRESSION (std::randomize() with {
+load dist {1 := 10, 0 := 90};
+}
+ ? 1'b1 : 1'b0)
+             ----------------------------1---------------------------
+
+-1- Status
+ 0  Not Covered
+ 1  Covered
+
+ LINE       99
+ EXPRESSION (std::randomize() with {
+en dist {1 := 85, 0 := 15};
+}
+ ? 1'b1 : 1'b0)
+             ---------------------------1--------------------------
+
+-1- Status
+ 0  Not Covered
+ 1  Covered
+
+ LINE       100
+ EXPRESSION (std::randomize() with {
+up_down dist {1 := 50, 0 := 50};
+}
+ ? 1'b1 : 1'b0)
+             -----------------------------1-----------------------------
+
+-1- Status
+ 0  Not Covered
+ 1  Covered
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : tb_top
+                Total Covered Percent 
+Totals          8     7       87.50   
+Total Bits      44    43      97.73   
+Total Bits 0->1 22    22      100.00  
+Total Bits 1->0 22    21      95.45   
+
+                              
+Signals          8  7  87.50  
+Signal Bits      44 43 97.73  
+Signal Bits 0->1 22 22 100.00 
+Signal Bits 1->0 22 21 95.45  
+
+Signal Details
+              Toggle Toggle 1->0 Toggle 0->1 
+clk           Yes    Yes         Yes         
+rst_n         No     No          Yes         
+en            Yes    Yes         Yes         
+load          Yes    Yes         Yes         
+up_down       Yes    Yes         Yes         
+load_val[7:0] Yes    Yes         Yes         
+count[7:0]    Yes    Yes         Yes         
+rollover      Yes    Yes         Yes         
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : tb_top
+         Line No. Total Covered Percent 
+Branches          6     6       100.00  
+TERNARY  98       2     2       100.00  
+TERNARY  99       2     2       100.00  
+TERNARY  100      2     2       100.00  
+
+
+98                     load     <= (std::randomize() with { load dist {1 := 10, 0 := 90}; }) ? 1'b1 : 1'b0;
+                                                                                             -1-  
+                                                                                             ==>  
+                                                                                             ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+99                     en       <= (std::randomize() with { en dist {1 := 85, 0 := 15}; }) ? 1'b1 : 1'b0;
+                                                                                           -1-  
+                                                                                           ==>  
+                                                                                           ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+100                    up_down  <= (std::randomize() with { up_down dist {1 := 50, 0 := 50}; }) ? 1'b1 : 1'b0;
+                                                                                                -1-  
+                                                                                                ==>  
+                                                                                                ==>  
+
+Branches:
+
+-1- Status  
+1   Covered 
+0   Covered 
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : tb_top
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 86.93 100.00  50.00  97.73 --     100.00 --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 84.55 100.00  50.00  97.73 --     100.00  75.00 
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME   
+ 86.93 100.00  50.00  97.73 --     100.00 --     tb_top 
+
+
+Parent : 
+
+none
+----------------
+
+
+Subtrees :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME         
+ 99.24 100.00 --      97.73 --     100.00 --     dut          
+ 86.36 --     --      97.73 --     --      75.00 u_assertions 
+ 97.73 --     --      97.73 --     --     --     u_coverage   
+
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : counter_coverage
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 97.73 --     --      97.73 --     --     --     
+
+Source File(s) : 
+
+/home/synp5/Digital/digitallvs26/sv_proj/coverage.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME              
+ 97.73 --     --      97.73 --     --     --     tb_top.u_coverage 
+
+
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : counter_coverage
+                Total Covered Percent 
+Totals          8     7       87.50   
+Total Bits      44    43      97.73   
+Total Bits 0->1 22    22      100.00  
+Total Bits 1->0 22    21      95.45   
+
+                            
+Ports          8  7  87.50  
+Port Bits      44 43 97.73  
+Port Bits 0->1 22 22 100.00 
+Port Bits 1->0 22 21 95.45  
+
+Port Details
+              Toggle Toggle 1->0 Toggle 0->1 Direction 
+clk           Yes    Yes         Yes         INPUT     
+rst_n         No     No          Yes         INPUT     
+en            Yes    Yes         Yes         INPUT     
+load          Yes    Yes         Yes         INPUT     
+up_down       Yes    Yes         Yes         INPUT     
+load_val[7:0] Yes    Yes         Yes         INPUT     
+count[7:0]    Yes    Yes         Yes         INPUT     
+rollover      Yes    Yes         Yes         INPUT     
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : tb_top.u_coverage
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 97.73 --     --      97.73 --     --     --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 97.73 --     --      97.73 --     --     --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME             
+ 97.73 --     --      97.73 --     --     --     counter_coverage 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME   
+ 86.93 100.00  50.00  97.73 --     100.00 --     tb_top 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
+===============================================================================
+Module : counter_8bit
+===============================================================================
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 99.24 100.00 --      97.73 --     100.00 --     
+
+Source File(s) : 
+
+/home/synp5/Digital/digitallvs26/sv_proj/counter.sv
+
+Module self-instances :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME       
+ 99.24 100.00 --      97.73 --     100.00 --     tb_top.dut 
+
+
+
+-------------------------------------------------------------------------------
+Line Coverage for Module : counter_8bit
+
+             Line No.   Total   Covered  Percent
+TOTAL                       13       13   100.00
+ALWAYS             19       13       13   100.00
+
+18                          always_ff @(posedge clk) begin
+19         1/1                  if (!rst_n) begin
+20         1/1                      count    <= '0;
+21         1/1                      rollover <= 1'b0;
+22         1/1                  end else if (load) begin
+23         1/1                      count    <= load_val;
+24         1/1                      rollover <= 1'b0;
+25         1/1                  end else if (en) begin
+26         1/1                      if (up_down) begin
+27         1/1                          count    <= count + 1'b1;
+28         1/1                          rollover <= (count == MAX_VAL);
+29                                  end else begin
+30         1/1                          count    <= count - 1'b1;
+31         1/1                          rollover <= (count == MIN_VAL);
+32                                  end
+33                              end else begin
+34         1/1                      rollover <= 1'b0;
+
+-------------------------------------------------------------------------------
+Toggle Coverage for Module : counter_8bit
+                Total Covered Percent 
+Totals          8     7       87.50   
+Total Bits      44    43      97.73   
+Total Bits 0->1 22    22      100.00  
+Total Bits 1->0 22    21      95.45   
+
+                            
+Ports          8  7  87.50  
+Port Bits      44 43 97.73  
+Port Bits 0->1 22 22 100.00 
+Port Bits 1->0 22 21 95.45  
+
+Port Details
+              Toggle Toggle 1->0 Toggle 0->1 Direction 
+clk           Yes    Yes         Yes         INPUT     
+rst_n         No     No          Yes         INPUT     
+en            Yes    Yes         Yes         INPUT     
+load          Yes    Yes         Yes         INPUT     
+up_down       Yes    Yes         Yes         INPUT     
+load_val[7:0] Yes    Yes         Yes         INPUT     
+count[7:0]    Yes    Yes         Yes         OUTPUT    
+rollover      Yes    Yes         Yes         OUTPUT    
+
+
+-------------------------------------------------------------------------------
+Branch Coverage for Module : counter_8bit
+         Line No. Total Covered Percent 
+Branches          5     5       100.00  
+IF       19       5     5       100.00  
+
+
+19                 if (!rst_n) begin
+                   -1-  
+20                     count    <= '0;
+                       ==>
+21                     rollover <= 1'b0;
+22                 end else if (load) begin
+                            -2-  
+23                     count    <= load_val;
+                       ==>
+24                     rollover <= 1'b0;
+25                 end else if (en) begin
+                            -3-  
+26                     if (up_down) begin
+                       -4-  
+27                         count    <= count + 1'b1;
+                           ==>
+28                         rollover <= (count == MAX_VAL);
+29                     end else begin
+30                         count    <= count - 1'b1;
+                           ==>
+31                         rollover <= (count == MIN_VAL);
+32                     end
+33                 end else begin
+34                     rollover <= 1'b0;
+                       ==>
+
+Branches:
+
+-1- -2- -3- -4- Status  
+1   -   -   -   Covered 
+0   1   -   -   Covered 
+0   0   1   1   Covered 
+0   0   1   0   Covered 
+0   0   0   -   Covered 
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Module Instance : tb_top.dut
+===============================================================================
+
+Instance :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 99.24 100.00 --      97.73 --     100.00 --     
+
+
+Instance's subtree :
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 99.24 100.00 --      97.73 --     100.00 --     
+
+
+Module : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME         
+ 99.24 100.00 --      97.73 --     100.00 --     counter_8bit 
+
+
+Parent : 
+
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME   
+ 86.93 100.00  50.00  97.73 --     100.00 --     tb_top 
+
+
+Subtrees :
+
+
+no children
+----------------
+
+
+-------------------------------------------------------------------------------
+Since this is the module's only instance, the coverage report is the same as for the module.
