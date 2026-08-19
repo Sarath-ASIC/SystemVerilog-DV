@@ -5,6 +5,7 @@ A SystemVerilog design and verification suite for a parameterized, synchronous 8
 ---
 
 ## 1. Architectural Specification
+![Counter Flow Diagram](<Couner_verification/Flow-Diagram/Counter_8bit.drawio (1).png>)
 
 ### Signal Definitions & Priority Rules
 * **`rst_n` (Active-Low Synchronous Reset)**: Clears `count` to `8'h00` and `rollover` to `0` on the rising clock edge. Has the highest priority.
