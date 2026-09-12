@@ -51,27 +51,25 @@ The DMA engine offloads bulk data transfers between source and destination memor
 
 ### 1.4 Finite State Machine (FSM)
 
-+--------+           (reg_start && len > 0)
-|  IDLE  | ------------------------------------+
-+--------+                                     |
-^                                          v
-|                                     +----------+
-| (Done)                              | LOAD_REQ | <-----+
-|                                     +----------+       |
-+--------+                                     | (m_rd_ack)  |
-|  DONE  |                                     v             |
-+--------+                                +-----------+      |
-^                                     | LOAD_WAIT |      |
-| (words_left == 1)                   +-----------+      |
-|                                          | (m_rd_valid)|
-+------------+                                 v             |
-| STORE_WAIT |                            +-----------+      |
-+------------+                            | STORE_REQ |      |
-^                                     +-----------+      |
-| (m_wr_ack)                               | (m_wr_ack)  |
-+------------------------------------------+             |
-|                                                        |
-+-----------------(words_left > 1)-----------------------+
+### 1.4 Finite State Machine (FSM)
+
+```mermaid
+stateDiagram-v2
+    direction TB
+
+    [*] --> IDLE
+    IDLE --> LOAD_REQ : reg_start && (len > 0)
+    
+    LOAD_REQ --> LOAD_WAIT : m_rd_ack
+    LOAD_WAIT --> STORE_REQ : m_rd_valid
+    
+    STORE_REQ --> STORE_WAIT : m_wr_ack
+    
+    STORE_WAIT --> LOAD_REQ : words_left > 1
+    STORE_WAIT --> DONE : words_left == 1
+    
+    DONE --> IDLE : dma_done_irq pulse
+```
 
 
 * **`IDLE` (3'b000):** Waits for host write to `REG_CTRL` with bit 0 high. Latches working addresses and length counters.
@@ -87,29 +85,40 @@ The DMA engine offloads bulk data transfers between source and destination memor
 
 The test environment leaves RTL source code untouched by binding protocol assertions and functional coverage directly to the core instance via SystemVerilog `bind`.
 
-+-------------------------------------------------------------------------+
-| tb_top                                                                  |
-|                                                                         |
-|  +----------------+    +-------------------+    +--------------------+  |
-|  |   Source RAM   |    |   dma_if (vif)    |    |  Destination RAM   |  |
-|  |  (256 x 32b)   |<-->| (Clocking Blocks) |<-->|   (256 x 32b)      |  |
-|  +----------------+    +-------------------+    +--------------------+  |
-|                                  |                                      |
-|                                  v                                      |
-|                       +---------------------+                           |
-|                       |   dma_engine (DUT)  |                           |
-|                       +---------------------+                           |
-|                                  |                                      |
-|             [SV bind]            |           [SV bind]                  |
-|          +-----------------------+----------------------+               |
-|          |                                              |               |
-|          v                                              v               |
-|  +------------------+                       +------------------------+  |
-|  |  dma_assertions  |                       |      dma_coverage      |  |
-|  |  (Protocol SVA)  |                       | (Functional Coverage)  |  |
-|  +------------------+                       +------------------------+  |
-+-------------------------------------------------------------------------+
+## 2. Verification Architecture
 
+The test environment leaves RTL source code untouched by binding protocol assertions and functional coverage directly to the core instance via SystemVerilog `bind`.
+
+```mermaid
+flowchart TB
+    subgraph TB_TOP ["tb_top (Testbench Environment)"]
+        direction TB
+        
+        subgraph MEM ["Memory Models & Drivers"]
+            SRC_RAM["Source RAM\n(256 x 32b)"]
+            VIF["dma_if (vif)\n(Clocking Blocks)"]
+            DST_RAM["Destination RAM\n(256 x 32b)"]
+        end
+
+        DUT["dma_engine (DUT)"]
+
+        subgraph BIND_MODS ["Bound Verification Modules (via SV bind)"]
+            SVA["dma_assertions\n(Protocol SVA)"]
+            COV["dma_coverage\n(Functional Coverage)"]
+        end
+    end
+
+    SRC_RAM <-->|Read Data / Handshake| VIF
+    VIF <-->|Write Data / Handshake| DST_RAM
+    VIF <-->|Bus Signals| DUT
+    
+    DUT -.->|binds to| SVA
+    DUT -.->|binds to| COV
+
+    style DUT fill:#1f2937,stroke:#3b82f6,stroke-width:2px,color:#fff
+    style BIND_MODS fill:#111827,stroke:#10b981,stroke-dasharray: 5 5,color:#fff
+    style MEM fill:#111827,stroke:#6b7280,color:#fff
+```
 
 ### 2.1 File Structure
 
