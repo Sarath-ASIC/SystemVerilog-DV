@@ -1,0 +1,33 @@
+Dashboard
+
+Date: Sun Sep 13 02:19:58 2026
+
+User: synp5
+
+Version: R-2020.12-SP2-1
+Command line: urg -dir simv.vdb -format both -report urgReport
+Number of tests: 1
+
+-------------------------------------------------------------------------------
+Total Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT GROUP  
+ 71.75  96.15  66.67  13.40  63.64  84.09 100.00  78.33 
+
+
+-------------------------------------------------------------------------------
+Hierarchical coverage data for top-level instances 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME   
+ 70.66  96.15  66.67  13.40  63.64  84.09 100.00 tb_top 
+
+
+-------------------------------------------------------------------------------
+Total Module Definition Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 70.66  96.15  66.67  13.40  63.64  84.09 100.00 
+
+
+-------------------------------------------------------------------------------
+Total Groups Coverage Summary 
+SCORE  INST SCORE WEIGHT 
+ 78.33  78.33     1      
+

@@ -1,0 +1,20 @@
+Design Hierarchy
+
+
+----------------
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT        
+ 70.66  96.15  66.67  13.40  63.64  84.09 100.00 tb_top 
+  
+  ----------------
+  SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT       
+   69.95  94.37  66.67  12.97  63.64  82.05 100.00 u_dut 
+    
+    ----------------
+    SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT       
+     16.82 --     --      16.82 --     --     --     u_cov 
+     57.04 --     --      14.08 --     --     100.00 u_sva 
+  
+  ----------------
+  SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT     
+   14.32 --     --      14.32 --     --     --     vif 
+

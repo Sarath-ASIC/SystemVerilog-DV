@@ -1,0 +1,16 @@
+Design Module List
+
+Total Module Definition Coverage Summary 
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT 
+ 70.66  96.15  66.67  13.40  63.64  84.09 100.00 
+
+
+Total modules in report: 5
+-------------------------------------------------------------------------------
+SCORE  LINE   COND   TOGGLE FSM    BRANCH ASSERT NAME           
+ 14.32 --     --      14.32 --     --     --     dma_if         
+ 16.82 --     --      16.82 --     --     --     dma_coverage   
+ 57.04 --     --      14.08 --     --     100.00 dma_assertions 
+ 63.66  94.37  66.67  11.56  63.64  82.05 --     dma_engine     
+ 91.10  98.31 --      75.00 --     100.00 --     tb_top         
+

@@ -1,0 +1,400 @@
+Group : tb_top.u_dut.u_cov::cg_registers
+
+===============================================================================
+Group : tb_top.u_dut.u_cov::cg_registers
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+ 56.67  56.67    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/synp5/Digital/digitallvs26/DMA/dma_coverage.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME              
+ 56.67 1      100    1        64           64            cg_dma_reg_writes 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   tb_top.u_dut.u_cov::cg_registers
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 11       5         6       56.67   
+
+
+Variables for Group  tb_top.u_dut.u_cov::cg_registers
+
+
+VARIABLE         EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_reg_address   4        0         4       100.00  100  1      1        0                    
+cp_transfer_len  5        4         1       20.00   100  1      1        0                    
+cp_ctrl_commands 2        1         1       50.00   100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_reg_address
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 4        0         4       100.00  
+
+
+User Defined Bins for cp_reg_address
+
+
+Bins
+
+NAME     COUNT AT LEAST 
+ctrl     1     1        
+len      1     1        
+dst_addr 1     1        
+src_addr 1     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_transfer_len
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 5        4         1       20.00   
+
+
+User Defined Bins for cp_transfer_len
+
+
+Uncovered bins
+
+NAME        COUNT AT LEAST NUMBER 
+large_burst 0     1        1      
+med_burst   0     1        1      
+single_wd   0     1        1      
+zero_len    0     1        1      
+
+
+Covered bins
+
+NAME        COUNT AT LEAST 
+small_burst 1     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_ctrl_commands
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        1         1       50.00   
+
+
+User Defined Bins for cp_ctrl_commands
+
+
+Uncovered bins
+
+NAME       COUNT AT LEAST NUMBER 
+soft_reset 0     1        1      
+
+
+Covered bins
+
+NAME        COUNT AT LEAST 
+start_pulse 1     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : cg_dma_reg_writes
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+ 56.67 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                             
+ 56.67  56.67    1      100    1        1            64           64                    tb_top.u_dut.u_cov::cg_registers 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   cg_dma_reg_writes
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 11       5         6       56.67   
+
+
+Variables for Group Instance  cg_dma_reg_writes
+
+
+VARIABLE         EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_reg_address   4        0         4       100.00  100  1      1        0                    
+cp_transfer_len  5        4         1       20.00   100  1      1        0                    
+cp_ctrl_commands 2        1         1       50.00   100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_reg_address
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 4        0         4       100.00  
+
+
+User Defined Bins for cp_reg_address
+
+
+Bins
+
+NAME     COUNT AT LEAST 
+ctrl     1     1        
+len      1     1        
+dst_addr 1     1        
+src_addr 1     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_transfer_len
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 5        4         1       20.00   
+
+
+User Defined Bins for cp_transfer_len
+
+
+Uncovered bins
+
+NAME        COUNT AT LEAST NUMBER 
+large_burst 0     1        1      
+med_burst   0     1        1      
+single_wd   0     1        1      
+zero_len    0     1        1      
+
+
+Covered bins
+
+NAME        COUNT AT LEAST 
+small_burst 1     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_ctrl_commands
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 2        1         1       50.00   
+
+
+User Defined Bins for cp_ctrl_commands
+
+
+Uncovered bins
+
+NAME       COUNT AT LEAST NUMBER 
+soft_reset 0     1        1      
+
+
+Covered bins
+
+NAME        COUNT AT LEAST 
+start_pulse 1     1        
+
+
+Group : tb_top.u_dut.u_cov::cg_bus_handshake
+
+===============================================================================
+Group : tb_top.u_dut.u_cov::cg_bus_handshake
+===============================================================================
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING 
+100.00 100.00    1      100    1        1            64           64            
+
+
+Source File(s) : 
+
+/home/synp5/Digital/digitallvs26/DMA/dma_coverage.sv
+
+1 Instances:
+
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING NAME             
+100.00 1      100    1        64           64            cg_dma_handshake 
+
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group   tb_top.u_dut.u_cov::cg_bus_handshake
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 3        0         3       100.00  
+
+
+Variables for Group  tb_top.u_dut.u_cov::cg_bus_handshake
+
+
+VARIABLE          EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_rd_ack_latency 1        0         1       100.00  100  1      1        0                    
+cp_wr_ack_latency 1        0         1       100.00  100  1      1        0                    
+cp_irq_event      1        0         1       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_rd_ack_latency
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_rd_ack_latency
+
+
+Bins
+
+NAME          COUNT AT LEAST 
+immediate_ack 4     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_wr_ack_latency
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_wr_ack_latency
+
+
+Bins
+
+NAME          COUNT AT LEAST 
+immediate_ack 4     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_irq_event
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_irq_event
+
+
+Bins
+
+NAME      COUNT AT LEAST 
+triggered 1     1        
+
+
+-------------------------------------------------------------------------------
+===============================================================================
+Group Instance : cg_dma_handshake
+===============================================================================
+SCORE  WEIGHT GOAL   AT LEAST AUTO BIN MAX PRINT MISSING 
+100.00 1      100    1        64           64            
+
+
+Group:
+
+SCORE  INSTANCES WEIGHT GOAL   AT LEAST PER INSTANCE AUTO BIN MAX PRINT MISSING COMMENT NAME                                 
+100.00 100.00    1      100    1        1            64           64                    tb_top.u_dut.u_cov::cg_bus_handshake 
+
+
+
+-------------------------------------------------------------------------------
+
+Summary for Group Instance   cg_dma_handshake
+
+
+
+CATEGORY  EXPECTED UNCOVERED COVERED PERCENT 
+Variables 3        0         3       100.00  
+
+
+Variables for Group Instance  cg_dma_handshake
+
+
+VARIABLE          EXPECTED UNCOVERED COVERED PERCENT GOAL WEIGHT AT LEAST AUTO BIN MAX COMMENT 
+cp_rd_ack_latency 1        0         1       100.00  100  1      1        0                    
+cp_wr_ack_latency 1        0         1       100.00  100  1      1        0                    
+cp_irq_event      1        0         1       100.00  100  1      1        0                    
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_rd_ack_latency
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_rd_ack_latency
+
+
+Bins
+
+NAME          COUNT AT LEAST 
+immediate_ack 4     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_wr_ack_latency
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_wr_ack_latency
+
+
+Bins
+
+NAME          COUNT AT LEAST 
+immediate_ack 4     1        
+
+
+-------------------------------------------------------------------------------
+
+Summary for Variable cp_irq_event
+
+
+CATEGORY          EXPECTED UNCOVERED COVERED PERCENT 
+User Defined Bins 1        0         1       100.00  
+
+
+User Defined Bins for cp_irq_event
+
+
+Bins
+
+NAME      COUNT AT LEAST 
+triggered 1     1        
+
+

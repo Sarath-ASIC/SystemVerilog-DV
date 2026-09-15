@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="Author" content="<username>"> <meta name="GENERATOR" content="urg/version [en] (platform name) [urg]">
+<title>Unified Coverage Report :: Module :: tb_top</title>
+<link type="text/css" rel="stylesheet" href="css/.urg.css">
+<link type="text/css" rel="stylesheet" href="css/.layout.css">
+<link type="text/css" rel="stylesheet" href="css/.breadcrumb.css">
+<script type="text/javascript" src="js/.jquery.js"></script>
+<script type="text/javascript" src="js/.jquery-ui.js"></script>
+<script type="text/javascript" src="js/.sortable.js"></script>
+<script type="text/javascript" src="js/.layout.js"></script>
+<script type="text/javascript" src="js/.breadcrumb.js"></script>
+<script type="text/javascript">
+var layout, westLayout, centerLayout;
+$(document).ready(function () {
+  if ($("#north-bread-crumb")) {
+    $("#north-bread-crumb").jBreadCrumb({easing:'swing'})
+  }
+  layout = $("body").layout({ 
+    resizable: true,
+    spacing_open: 4,
+    spacing_closed: 4,
+    north: {
+      size: 76
+    },
+    south: {
+      size: 45,
+      initClosed: true
+    },
+    west: {
+      size: 500,
+      resizable: true,
+      initClosed: false
+    }
+  });
+  centerLayout = $('div.ui-layout-center').layout({
+    north__paneSelector: ".ui-layout-center-inner-north",
+    center__paneSelector: ".ui-layout-center-inner-center", 
+    north__size: 50,
+    spacing_open: 4,
+    spacing_closed: 4
+  });
+});
+</script>
+</head>
+<body onLoad="initPage();"><div class="ui-layout-north">
+<div class="logo"></div>
+<center class="pagetitle">Module Definition</center>
+<div align="center"><a href="dashboard.html" ><b>dashboard</b></a> | <a href="hierarchy.html" ><b>hierarchy</b></a> | <a href="modlist.html" ><b>modlist</b></a> | <a href="groups.html" ><b>groups</b></a> | <a href="tests.html" ><b>tests</b></a> | <a href="asserts.html" ><b>asserts</b></a></div>
+
+</div>
+<div class="ui-layout-west">
+<div name='tag_tb_top'>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module : <a href="#"  onclick="showContent('tag_tb_top')">tb_top</a></span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 91.10</td>
+<td class="s9 cl rt"><a href="mod1.html#Line" > 98.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod1.html#Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod1.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<span class=repname>Source File(s) : </span>
+<br clear=all>
+<a href="javascript:void(0);"  onclick="openSrcFile('/home/synp5/Digital/digitallvs26/DMA/dma_testbench.sv')">/home/synp5/Digital/digitallvs26/DMA/dma_testbench.sv</a><br clear=all>
+<br clear=all>
+<span class=repname>Module self-instances :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod1.html#inst_tag_1"  onclick="showContent('inst_tag_1')">tb_top</a></td>
+<td class="s9 cl rt"> 91.10</td>
+<td class="s9 cl rt"><a href="mod1.html#Line" > 98.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod1.html#Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod1.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table></div>
+</div>
+<br clear=all>
+<div name='tag_tb_top'>
+<hr>
+<a name="inst_tag_1"></a>
+<div class=modhdr>
+<br clear=all>
+<span class=titlename>Module Instance : <a href="hierarchy.html#tag_urg_inst_1" >tb_top</a></span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Instance :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s9 cl rt"> 91.10</td>
+<td class="s9 cl rt"><a href="mod1.html#Line" > 98.31</a></td>
+<td class="wht cl rt"></td>
+<td class="s7 cl rt"><a href="mod1.html#Toggle" > 75.00</a></td>
+<td class="wht cl rt"></td>
+<td class="s10 cl rt"><a href="mod1.html#Branch" >100.00</a></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Instance's subtree :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="s7 cl rt"> 70.66</td>
+<td class="s9 cl rt"> 96.15</td>
+<td class="s6 cl rt"> 66.67</td>
+<td class="s1 cl rt"> 13.40</td>
+<td class="s6 cl rt"> 63.64</td>
+<td class="s8 cl rt"> 84.09</td>
+<td class="s10 cl rt">100.00</td>
+</tr></table><br clear=all>
+<br clear=all>
+<span class=repname>Parent : </span>
+<br clear=all>
+<span class=inst>none</span>
+<br clear=all>
+<br clear=all>
+<span class=repname>Subtrees :</span>
+<br clear=all>
+<table align=left>
+<tr class="sortablehead">
+<td class="alfsrt">NAME</td><td>SCORE</td><td>LINE</td><td>COND</td><td>TOGGLE</td><td>FSM</td><td>BRANCH</td><td>ASSERT</td></tr><tr>
+<td class="wht cl wordwrap"><a href="mod2.html#inst_tag_2" id="tag_urg_inst_2">u_dut</a></td>
+<td class="s6 cl rt"> 69.95</td>
+<td class="s9 cl rt"> 94.37</td>
+<td class="s6 cl rt"> 66.67</td>
+<td class="s1 cl rt"> 12.97</td>
+<td class="s6 cl rt"> 63.64</td>
+<td class="s8 cl rt"> 82.05</td>
+<td class="s10 cl rt">100.00</td>
+</tr><tr>
+<td class="wht cl wordwrap"><a href="mod0.html#inst_tag_0" id="tag_urg_inst_0">vif</a></td>
+<td class="s1 cl rt"> 14.32</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="s1 cl rt"> 14.32</td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+<td class="wht cl rt"></td>
+</tr></table><br clear=all>
+</div>
+</div>
+<hr>
+Since this is the module's only instance, the coverage report is the same as for the module.</div>
+<div class="ui-layout-center">
+<div class="ui-layout-center-inner-center">
+<div name='tag_tb_top'>
+<a name="Line"></a>
+Line Coverage for Module : <a href="mod1.html" >tb_top</a><br clear=all>
+<table class="noborder">
+<col width="122">
+<col span="4" width="82">
+<tr><th></th><th>Line No.</th><th>Total</th><th>Covered</th><th>Percent</th></tr>
+<tr class="s9"><td class="lf">TOTAL</td><td></td><td>59</td><td>58</td><td>98.31</td></tr>
+<tr class="s10"><td class="lf">INITIAL</td><td>14</td><td>4</td><td>4</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ALWAYS</td><td>101</td><td>15</td><td>15</td><td>100.00</td></tr>
+<tr class="s10"><td class="lf">ROUTINE</td><td>129</td><td>8</td><td>8</td><td>100.00</td></tr>
+<tr class="s9"><td class="lf">INITIAL</td><td>139</td><td>32</td><td>31</td><td>96.88</td></tr>
+</table>
+<pre class="code"><br clear=all>
+13                          initial begin
+14         1/1                  clk = 1'b0;
+15         3/3                  forever #(CLK_PERIOD / 2) clk = ~clk;
+16                          end
+17                      
+18                          // Interface Instantiation
+19                          dma_if #(
+20                              .DATA_WIDTH(DATA_WIDTH),
+21                              .ADDR_WIDTH(ADDR_WIDTH)
+22                          ) vif (
+23                              .clk(clk),
+24                              .rst_n(rst_n)
+25                          );
+26                      
+27                          // DUT Instantiation
+28                          dma_engine #(
+29                              .DATA_WIDTH(DATA_WIDTH),
+30                              .ADDR_WIDTH(ADDR_WIDTH)
+31                          ) u_dut (
+32                              .clk          (vif.clk),
+33                              .rst_n        (vif.rst_n),
+34                              .ctrl_wr_en   (vif.ctrl_wr_en),
+35                              .ctrl_addr    (vif.ctrl_addr),
+36                              .ctrl_wdata   (vif.ctrl_wdata),
+37                              .ctrl_rdata   (vif.ctrl_rdata),
+38                              .m_rd_addr    (vif.m_rd_addr),
+39                              .m_rd_req     (vif.m_rd_req),
+40                              .m_rd_ack     (vif.m_rd_ack),
+41                              .m_rd_data    (vif.m_rd_data),
+42                              .m_rd_valid   (vif.m_rd_valid),
+43                              .m_wr_addr    (vif.m_wr_addr),
+44                              .m_wr_data    (vif.m_wr_data),
+45                              .m_wr_req     (vif.m_wr_req),
+46                              .m_wr_ack     (vif.m_wr_ack),
+47                              .dma_done_irq (vif.dma_done_irq),
+48                              .dma_busy     (vif.dma_busy)
+49                          );
+50                      
+51                          // Bind Assertion Model
+52                          bind dma_engine dma_assertions #(
+53                              .DATA_WIDTH(DATA_WIDTH),
+54                              .ADDR_WIDTH(ADDR_WIDTH)
+55                          ) u_sva (
+56                              .clk          (clk),
+57                              .rst_n        (rst_n),
+58                              .ctrl_wr_en   (ctrl_wr_en),
+59                              .ctrl_addr    (ctrl_addr),
+60                              .ctrl_wdata   (ctrl_wdata),
+61                              .m_rd_addr    (m_rd_addr),
+62                              .m_rd_req     (m_rd_req),
+63                              .m_rd_ack     (m_rd_ack),
+64                              .m_rd_data    (m_rd_data),
+65                              .m_rd_valid   (m_rd_valid),
+66                              .m_wr_addr    (m_wr_addr),
+67                              .m_wr_data    (m_wr_data),
+68                              .m_wr_req     (m_wr_req),
+69                              .m_wr_ack     (m_wr_ack),
+70                              .dma_done_irq (dma_done_irq),
+71                              .dma_busy     (dma_busy)
+72                          );
+73                      
+74                          // Bind Coverage Model
+75                          bind dma_engine dma_coverage #(
+76                              .DATA_WIDTH(DATA_WIDTH),
+77                              .ADDR_WIDTH(ADDR_WIDTH)
+78                          ) u_cov (
+79                              .clk          (clk),
+80                              .rst_n        (rst_n),
+81                              .ctrl_wr_en   (ctrl_wr_en),
+82                              .ctrl_addr    (ctrl_addr),
+83                              .ctrl_wdata   (ctrl_wdata),
+84                              .m_rd_addr    (m_rd_addr),
+85                              .m_rd_req     (m_rd_req),
+86                              .m_rd_ack     (m_rd_ack),
+87                              .m_rd_valid   (m_rd_valid),
+88                              .m_wr_addr    (m_wr_addr),
+89                              .m_wr_req     (m_wr_req),
+90                              .m_wr_ack     (m_wr_ack),
+91                              .dma_done_irq (dma_done_irq),
+92                              .dma_busy     (dma_busy)
+93                          );
+94                      
+95                          // Memory Models (Source and Destination RAMs)
+96                          logic [31:0] src_ram [0:255];
+97                          logic [31:0] dst_ram [0:255];
+98                      
+99                          // Bus Slave Responders
+100                         always @(posedge clk or negedge rst_n) begin
+101        1/1                  if (!rst_n) begin
+102        1/1                      vif.m_rd_ack   &lt;= 1'b0;
+103        1/1                      vif.m_rd_valid &lt;= 1'b0;
+104        1/1                      vif.m_rd_data  &lt;= 32'h0;
+105        1/1                      vif.m_wr_ack   &lt;= 1'b0;
+106                             end else begin
+107                                 // Read Bus Responder
+108        1/1                      if (vif.m_rd_req) begin
+109        1/1                          vif.m_rd_ack   &lt;= 1'b1;
+110        1/1                          vif.m_rd_valid &lt;= 1'b1;
+111        1/1                          vif.m_rd_data  &lt;= src_ram[vif.m_rd_addr[9:2]];
+112                                 end else begin
+113        1/1                          vif.m_rd_ack   &lt;= 1'b0;
+114        1/1                          vif.m_rd_valid &lt;= 1'b0;
+115                                 end
+116                     
+117                                 // Write Bus Responder
+118        1/1                      if (vif.m_wr_req) begin
+119        1/1                          vif.m_wr_ack &lt;= 1'b1;
+120        1/1                          dst_ram[vif.m_wr_addr[9:2]] &lt;= vif.m_wr_data;
+121                                 end else begin
+122        1/1                          vif.m_wr_ack &lt;= 1'b0;
+123                                 end
+124                             end
+125                         end
+126                     
+127                         // Task: Register Write
+128                         task automatic reg_write(input logic [3:0] addr, input logic [31:0] data);
+129        2/2                  @(vif.drv_cb);
+130        1/1                  vif.drv_cb.ctrl_wr_en &lt;= 1'b1;
+131        1/1                  vif.drv_cb.ctrl_addr  &lt;= addr;
+132        1/1                  vif.drv_cb.ctrl_wdata &lt;= data;
+133        2/2                  @(vif.drv_cb);
+134        1/1                  vif.drv_cb.ctrl_wr_en &lt;= 1'b0;
+135                         endtask
+136                     
+137                         // Main Stimulus Loop
+138                         initial begin
+139        1/1                  rst_n = 1'b0;
+140        1/1                  vif.ctrl_wr_en = 1'b0;
+141        1/1                  vif.ctrl_addr  = 4'h0;
+142        1/1                  vif.ctrl_wdata = 32'h0;
+143                     
+144                             // Initialize RAMs
+145        1/1                  for (int i = 0; i &lt; 256; i++) begin
+146        1/1                      src_ram[i] = 32'hA000_0000 + i;
+147        1/1                      dst_ram[i] = 32'h0000_0000;
+148                             end
+149                     
+150                             // Reset Sequence
+151        3/3                  repeat (5) @(posedge clk);
+                        REPEAT_FALSE
+152        1/1                  rst_n = 1'b1;
+153        3/3                  repeat (2) @(posedge clk);
+                        REPEAT_FALSE
+154                     
+155        1/1                  $display(&quot;[TB] Starting DMA 4-Word Transfer Test...&quot;);
+156        1/1                  reg_write(4'h0, 32'h0000_0010); // SRC ADDR = 0x10 (index 4)
+157        1/1                  reg_write(4'h4, 32'h0000_0040); // DST ADDR = 0x40 (index 16)
+158        1/1                  reg_write(4'h8, 32'd4);          // LEN = 4 words
+159        1/1                  reg_write(4'hC, 32'h1);          // START = 1
+160                     
+161                             // Wait for IRQ
+162        2/2                  wait (vif.dma_done_irq === 1'b1);
+163        2/2                  @(posedge clk);
+164        1/1                  $display(&quot;[TB] Transfer Complete IRQ detected.&quot;);
+165                     
+166                             // Verification Check
+167        1/1                  for (int i = 0; i &lt; 4; i++) begin
+168        1/1                      if (dst_ram[16 + i] !== (32'hA000_0000 + 4 + i)) begin
+169        <font color = "red">0/1     ==>                  $error(&quot;[TB FAIL] Mismatch at index %0d: Expected 0x%08h, Got 0x%08h&quot;,</font>
+170                                            16 + i, (32'hA000_0000 + 4 + i), dst_ram[16 + i]);
+171                                 end else begin
+172        1/1                          $display(&quot;[TB PASS] Word %0d matched: 0x%08h&quot;, i, dst_ram[16 + i]);
+173                                 end
+174                             end
+175                     
+176        2/2                  #100;
+177        1/1                  $display(&quot;[TB] All tests completed successfully.&quot;);
+178        1/1                  $finish;
+</pre>
+<hr>
+<a name="Toggle"></a>
+Toggle Coverage for Module : <a href="mod1.html" >tb_top</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s5">
+<td>Totals</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s7">
+<td>Total Bits</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s10">
+<td nowrap>Total Bits 0->1</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s5">
+<td nowrap>Total Bits 1->0</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80></th><th nowrap width=80></th><th nowrap width=80></th></tr><tr class="s5">
+<td>Signals</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr><tr class="s7">
+<td>Signal Bits</td>
+<td class="rt">4</td>
+<td class="rt">3</td>
+<td class="rt">75.00 </td>
+</tr><tr class="s10">
+<td nowrap>Signal Bits 0->1</td>
+<td class="rt">2</td>
+<td class="rt">2</td>
+<td class="rt">100.00</td>
+</tr><tr class="s5">
+<td nowrap>Signal Bits 1->0</td>
+<td class="rt">2</td>
+<td class="rt">1</td>
+<td class="rt">50.00 </td>
+</tr></table><br clear=all>
+<table align=left class="sortable noborder">
+<caption><b>Signal Details</b></caption>
+<tr class="sortablehead">
+<td class="alfsrt">Name</td><td class="alfsrt">Toggle</td><td class="alfsrt">Toggle 1->0</td><td class="alfsrt">Toggle 0->1</td></tr><tr>
+<td>clk</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+<td class="s9 cl">Yes</td>
+</tr><tr>
+<td>rst_n</td>
+<td class="s3 cl">No</td>
+<td class="s3 cl">No</td>
+<td class="s9 cl">Yes</td>
+</tr></table><br clear=all>
+<hr>
+<a name="Branch"></a>
+Branch Coverage for Module : <a href="mod1.html" >tb_top</a><br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=120></th><th nowrap width=80>Line No.</th><th nowrap width=80>Total</th><th nowrap width=80>Covered</th><th nowrap width=80>Percent</th></tr><tr class="s10">
+<td>Branches</td>
+<td></td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr><tr class="s10">
+<td>IF</td>
+<td class="rt">101</td>
+<td class="rt">5</td>
+<td class="rt">5</td>
+<td class="rt">100.00</td>
+</tr></table><br clear=all>
+<pre class="code"><br clear=all>
+101                if (!rst_n) begin
+                   <font color = "green">-1-</font>  
+102                    vif.m_rd_ack   <= 1'b0;
+           <font color = "green">            ==></font>
+103                    vif.m_rd_valid <= 1'b0;
+104                    vif.m_rd_data  <= 32'h0;
+105                    vif.m_wr_ack   <= 1'b0;
+106                end else begin
+107                    // Read Bus Responder
+108                    if (vif.m_rd_req) begin
+                       <font color = "green">-2-</font>     
+109                        vif.m_rd_ack   <= 1'b1;
+           <font color = "green">                ==></font>
+110                        vif.m_rd_valid <= 1'b1;
+111                        vif.m_rd_data  <= src_ram[vif.m_rd_addr[9:2]];
+112                    end else begin
+113                        vif.m_rd_ack   <= 1'b0;
+           <font color = "green">                ==></font>
+114                        vif.m_rd_valid <= 1'b0;
+115                    end
+116        
+117                    // Write Bus Responder
+118                    if (vif.m_wr_req) begin
+                       <font color = "green">-3-</font>     
+119                        vif.m_wr_ack <= 1'b1;
+           <font color = "green">                ==></font>
+120                        dst_ram[vif.m_wr_addr[9:2]] <= vif.m_wr_data;
+121                    end else begin
+122                        vif.m_wr_ack <= 1'b0;
+           <font color = "green">                ==></font>
+</pre>
+<br clear=all>
+<span class=repname>Branches:</span>
+<br clear=all>
+<table align=left class="noborder">
+<tr>
+<th nowrap width=80>-1-</th><th nowrap width=80>-2-</th><th nowrap width=80>-3-</th><th nowrap width=80>Status</th></tr><tr class="uGreen">
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>1</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>1</td>
+<td>Covered</td>
+</tr><tr class="uGreen">
+<td align=center>0</td>
+<td align=center nowrap>-</td>
+<td align=center>0</td>
+<td>Covered</td>
+</tr></table><br clear=all>
+</div>
+</div>
+<div class="ui-layout-center-inner-north">
+<div id="center-bread-crumb" class="breadCrumb module urg-margin-bottom">
+  <ul name="inst_tag_1">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+  <ul name="tag_tb_top">
+    <li>
+      <a href="#Line">Line</a>    </li>
+    <li>
+      <a href="#Toggle">Toggle</a>    </li>
+    <li>
+      <a href="#Branch">Branch</a>    </li>
+  </ul>
+</div>
+</div>
+</div>
+<div class="ui-layout-south">
+<table align=center><tr><td class="s0 cl">0%</td>
+<td class="s1 cl">10%</td>
+<td class="s2 cl">20%</td>
+<td class="s3 cl">30%</td>
+<td class="s4 cl">40%</td>
+<td class="s5 cl">50%</td>
+<td class="s6 cl">60%</td>
+<td class="s7 cl">70%</td>
+<td class="s8 cl">80%</td>
+<td class="s9 cl">90%</td>
+<td class="s10 cl">100%</td></tr></table></div>
+</body>
+</html>
